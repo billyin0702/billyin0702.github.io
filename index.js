@@ -57,6 +57,6 @@ function realtimeClock() {
 
 
 window.addEventListener('load', function () {
-    document.getElementById("googleSearchId").focus();
+    document.getElementById("searchBarId").focus();
     console.log("Web page Loaded");
 });
