@@ -31,13 +31,6 @@ function renderWeather(){
         .catch(error => console.error(error));
 }
 
-function renderWeatherLoop(){
-    while{
-        renderWeather();
-        setTimeout(renderWeatherLoop, 3600000);
-    }
-}
-
 function realtimeClock() {
     
     var rtClock = new Date();
