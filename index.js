@@ -53,3 +53,10 @@ function realtimeClock() {
 
     // console.log(hours + "  :  " + minutes + "  :  " + seconds + " " + amPm);
 }
+
+
+
+window.addEventListener('load', function () {
+    document.getElementById("googleSearchId").focus();
+    console.log("Web page Loaded");
+});
