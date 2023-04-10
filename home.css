@@ -4,7 +4,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #021d3c;
-    min-height: 80vh;
+    min-height: 83vh;
     animation: fade-in 0.5s ease-out forwards;
 }
 
