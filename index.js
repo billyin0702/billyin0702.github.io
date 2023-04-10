@@ -1,5 +1,16 @@
 const assignments_names = ['a0']
 const assignment_content = {}
+const quotes_categories = ["age", "alone", "amazing", "anger", 
+"architecture", "art", "attitude", "beauty", "best", "birthday", 
+"business", "car", "change", "communications", "computers", "cool", 
+"courage", "dad", "dating", "death", "design", "dreams", "education", 
+"environmental", "equality", "experience", "failure", "faith", "family", 
+"famous", "fear", "fitness", "food", "forgiveness", "freedom", "friendship", 
+"funny", "future", "good", "government", "graduation", "great", "happiness", 
+"health", "history", "home", "hope", "humor", "imagination", "inspirational", 
+"intelligence", "jealousy", "knowledge", "leadership", "learning", "legal", "life", 
+"love", "marriage", "medical", "men", "mom", "money", "morning", "movies", "success"];
+
 
 function renderAssignments(){
     // render assignments
@@ -50,13 +61,37 @@ function realtimeClock() {
     document.getElementById('clock').innerHTML = 
         hours + "  :  " + minutes + "  :  " + seconds + " " + amPm;
     var t = setTimeout(realtimeClock, 500);
-
-    // console.log(hours + "  :  " + minutes + "  :  " + seconds + " " + amPm);
 }
 
 
+function getQuote(){
+    fetch(`https://api.api-ninjas.com/v1/quotes?category=${quotes_categories[Math.floor(Math.random() * quotes_categories.length)]}`,{
+        method: 'GET',
+        headers: {
+            'X-Api-Key': 'v+PRdHUfgSessDXDhCVjgQ==0c87KsoDNNntrwyj'
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            const quote = document.getElementById('quote');
+            const author = document.getElementById('author');
+            // const category = document.getElementById('category');
 
-window.addEventListener('load', function () {
-    document.getElementById("uniqueGSId").focus();
-    console.log("Web page Loaded");
-});
+            quote.innerHTML = `"${data[0].quote}"`;
+            author.innerHTML = `~ ${data[0].author}`;
+            // category.innerHTML = `${data.category}`;
+        })
+        .catch(error => console.error(error));
+}
+
+
+window.onload = function() {
+    // When everything has loaded, set the visibility of the body to visible
+    document.body.style.visibility = "visible";
+};
+
+// // Focus on Search Bar on Load
+// window.addEventListener('load', function () {
+//     document.getElementById("uniqueGSId").focus();
+//     console.log("Web page Loaded");
+// });

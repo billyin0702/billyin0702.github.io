@@ -6,10 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/4832/4832372.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Oxygen:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Oxygen:wght@300&family=Tillana:wght@500&display=swap" rel="stylesheet">
-    <script src="index.js" onload="renderWeather();"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&family=Oxygen:wght@300&family=Tillana:wght@500&display=swap" rel="stylesheet">
+    <script src="index.js" onload="getQuote();renderWeather();"></script>
 </head>
 <body onload="realtimeClock();">
     <div class="nav_bar">
@@ -26,9 +24,18 @@
     <div class="header">
         <p>Welcome, Bill</p>
     </div>
-    <form class="googleSearchbar" action="https://www.google.com/search">
+    <!-- Search Bar: Deprecated -->
+    <!-- <form class="googleSearchbar" action="https://www.google.com/search">
         <button class="googleSearchIcon" type="submit"><img src="Images/magnifier.png"></button>
         <input class="googleSearch" id="uniqueGSId" type="search" name="q">
-    </form>
+    </form> -->
+
+    <div class="whiteBox"></div>
+
+    <div class="quote-sec">
+        <h1 class="quote-quote" id="quote"></h1>
+        <p class="quote-author" id="author"></p>
+    </div>
+
 </body>
 </html>
