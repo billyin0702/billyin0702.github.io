@@ -84,11 +84,9 @@ function getQuote(){
         .catch(error => console.error(error));
 }
 
-
-window.onload = function() {
-    // When everything has loaded, set the visibility of the body to visible
-    document.body.style.visibility = "visible";
-};
+// document.addEventListener('DOMContentLoaded', function() {
+//     window.location.hash = '';
+//   });
 
 // // Focus on Search Bar on Load
 // window.addEventListener('load', function () {
