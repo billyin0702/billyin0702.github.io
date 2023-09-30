@@ -84,12 +84,11 @@ function getQuote(){
         .catch(error => console.error(error));
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     window.location.hash = '';
-//   });
-
-// // Focus on Search Bar on Load
-// window.addEventListener('load', function () {
-//     document.getElementById("uniqueGSId").focus();
-//     console.log("Web page Loaded");
-// });
+// After calling, disable the button for 30 seconds
+function refreshQuote() {
+    getQuote();
+    const button = document.getElementById('quoterefbutton');
+    console.log("Button: ", button)
+    button.setAttribute("disabled", "disabled");
+    setTimeout(function() { button.removeAttribute("disabled")}, 30000);
+}
