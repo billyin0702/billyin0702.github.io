@@ -15,7 +15,7 @@ header {
 
 .portfolio-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 20px;
@@ -23,17 +23,26 @@ header {
 
 .portfolio-item {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  width: 80%;
-  max-width: 600px;
+  max-width: 500px;
+  margin-right: 50px;
+}
+
+.frame {
+  width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10%; /* Circular image */
+  display: block;
 }
 
 .portfolio-item img {
-  width: 400px;
-  height: 400px;
-  margin-right: 50px;
-  border-radius: 10%; /* Circular image */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .portfolio-item-details {
