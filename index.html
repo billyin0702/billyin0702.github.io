@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Bill's Website</title>
-	<link rel="stylesheet" href="home.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/4832/4832372.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&family=Oxygen:wght@300&family=Tillana:wght@500&display=swap" rel="stylesheet">
+  <head>
+    <title>Bill's Website</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn-icons-png.flaticon.com/512/4832/4832372.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;600&family=Oxygen:wght@300&family=Tillana:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <script src="index.js" onload="getQuote();renderWeather();"></script>
-</head>
-<body onload="realtimeClock();">
+  </head>
+  <body onload="realtimeClock();">
     <div class="nav_bar">
-        <div class="nb_weather">
-            <div id="weather">
-                <img src="Images/snowfall.png"><div id="weather-desc"></div>
-                <img src="Images/thermometer.png"><div id="weather-maintemp"></div>
-                <img src="Images/man.png"><div id="weather-feeltemp"></div>
-                <img src="Images/drop.png"><div id="weather-humidity"></div>
-            </div>
+      <div class="nb_weather">
+        <div id="weather">
+          <img src="Images/snowfall.png" />
+          <div id="weather-desc"></div>
+          <img src="Images/thermometer.png" />
+          <div id="weather-maintemp"></div>
+          <img src="Images/man.png" />
+          <div id="weather-feeltemp"></div>
+          <img src="Images/drop.png" />
+          <div id="weather-humidity"></div>
         </div>
+      </div>
+      <div class="right-side">
+        <a href="archive/cs327/my_work.html" class="ass-button">Miscellaneous</a>
         <div id="clock"></div>
+      </div>
     </div>
     <div class="info_sec">
-        <div class="header">
-            <p>Welcome, Bill</p>
-        </div>
+      <div class="header">
+        <p>Welcome, Bill</p>
+      </div>
 
-        <div class="whiteBox"></div>
+      <div class="whiteBox"></div>
 
-        <div class="quote-sec">
-            <h1 class="quote-quote" id="quote"></h1>
-            <p class="quote-author" id="author"></p>
-            <button id="quoterefbutton" onclick="refreshQuote();" title\="refresh quote"><img id="quote-refresh" src="Images/refresh.png"></button>
-        </div>
+      <div class="quote-sec">
+        <h1 class="quote-quote" id="quote"></h1>
+        <p class="quote-author" id="author"></p>
+        <button
+          id="quoterefbutton"
+          onclick="refreshQuote();"
+          title\="refresh quote"
+        >
+          <img id="quote-refresh" src="Images/refresh.png" />
+        </button>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

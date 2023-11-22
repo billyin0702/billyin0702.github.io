@@ -211,11 +211,47 @@ img{
     margin-left: 5px;
 }
 
-.whiteBox{
+.whiteBox {
     width: 30vw;
     height: 2px;
     background-color: white;
     animation: stretch 1s ease-out forwards;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    width: 400px;
+}
+
+/* Basic Button Styles */
+.ass-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db; /* Border color */
+    color: #3498db; /* Text color */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+    margin-right: 20px;
+}
+
+/* Hover State */
+.ass-button:hover {
+background-color: #3498db; /* Background color on hover */
+color: #ffffff; /* Text color on hover */
+}
+
+/* Additional Styling (Optional) */
+.ass-button:active {
+transform: translateY(1px); /* Add a subtle press effect when clicked */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .googleSearchbar{
