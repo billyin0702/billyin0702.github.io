@@ -244,14 +244,14 @@ img{
 
 /* Hover State */
 .ass-button:hover {
-background-color: #3498db; /* Background color on hover */
-color: #ffffff; /* Text color on hover */
+    background-color: #3498db; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
 }
 
 /* Additional Styling (Optional) */
 .ass-button:active {
-transform: translateY(1px); /* Add a subtle press effect when clicked */
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transform: translateY(1px); /* Add a subtle press effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .googleSearchbar{
